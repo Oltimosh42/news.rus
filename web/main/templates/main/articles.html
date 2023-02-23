@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block title %}news.rus{% endblock %}
+
+{%block content%}
+<div class="content_blocks">
+    <div class = 'row md-2'>
+{%for el in art%}
+
+<div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{el.cat}}</font></font></strong>
+          <h3 class="mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{el.title}}</font></font></h3>
+          <div class="mb-1 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{el.time_add}}</font></font></div>
+          <a href="{{el.get_absolute_url}}" class="stretched-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">продолжить чтение</font></font></a>
+        </div>
+
+      </div>
+</div>
+{%endfor%}
+</div>
+</div>
+{%endblock%}
+
+
+

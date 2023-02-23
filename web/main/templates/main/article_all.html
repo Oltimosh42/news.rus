@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block content%}
+
+<div class="article">
+    <h1 class="title">{{art_all.title}}</h1>
+    <p class="intro">{{art_all.intro}}</p>
+    {%if art_all.photo%}
+    <div class="photo"><img src="{{art_all.photo.url}}" width="100%"></div>
+    {%endif%}
+    <br>
+    <p class="content">{{art_all.content|linebreaksbr}}</p>
+    {{art_all.time_add}}
+</div>
+{% endblock %}
+
